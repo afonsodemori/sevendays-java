@@ -1,10 +1,10 @@
 # 7 Days Of Code: Java
 
-**7 Days Of Code** is a webpage maintained by [Alura](https://www.alura.com.br), a Brazilian Technology School, with a
-set of code challenges divided by technology (language, framework, tool, etc.) so the student can put in practice
-their knowledge solving 7 challenges, one by day, in the technology they're learning.
+**[7DaysOfCode.io](https://7daysofcode.io)** is a webpage maintained by [Alura](https://www.alura.com.br) — a Brazilian
+Technology School — with a set of code challenges divided by technology (languages, frameworks, tools, etc.) so the
+students can put in practice their knowledge solving 7 challenges, one per day, in the technology they're learning.
 
-**Learn more:** https://7daysofcode.io/matricula/java
+**This repository is for the Java challenges.** Learn more and subscribe at https://7daysofcode.io/matricula/java
 
 ## Day 1
 
