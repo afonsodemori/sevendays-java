@@ -16,3 +16,21 @@ the corresponding JSON in the console.
 * [IMDB API](https://imdb-api.com/api)
 * [OpenJDK.org: Introduction to the Java HTTP Client](https://openjdk.org/groups/net/httpclient/intro.html)
 * [Java System.getProperty vs System.getenv](https://www.baeldung.com/java-system-get-property-vs-system-getenv)
+
+## Day 2
+
+On that day, you will parse the JSON response you get from IMDB to extract its information and attributes (such as
+title, poster, rating, etc).
+
+> As and extra, I decided to cache the API response in order to save resources and avoid being blocked by IMDB server
+> due to too many requests. Certainly there are better ways to do that... but I developed my own solution, and I'm proud
+> of it :-)
+
+### Screenshot
+
+![Result of the execution of the code for the 2nd day](docs/images/day-2-screenshot-run.png)
+
+### References
+
+* [Java Program to Write into a File](https://www.geeksforgeeks.org/java-program-to-write-into-a-file/)
+* [Java API: Class File ::createTempFile](https://docs.oracle.com/javase/7/docs/api/java/io/File.html#createTempFile)
