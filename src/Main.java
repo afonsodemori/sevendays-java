@@ -4,6 +4,8 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.net.http.HttpResponse.BodyHandlers;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -14,21 +16,10 @@ public class Main {
 
     private static final int REQUEST_TIMEOUT = 10;
     private static final String API_KEY = System.getenv("IMDB_API_KEY");
+    public static final String ENDPOINT_TOP_250_MOVIES = "https://imdb-api.com/en/API/Top250Movies/";
 
     public static void main(String[] args) throws IOException, InterruptedException {
-        String endpoint = "https://imdb-api.com/en/API/Top250Movies/" + API_KEY;
-
-        HttpClient client = HttpClient.newHttpClient();
-
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(endpoint))
-                .timeout(Duration.ofSeconds(REQUEST_TIMEOUT))
-                .GET()
-                .build();
-
-        HttpResponse<String> response = client
-                .send(request, BodyHandlers.ofString()); // @see sendAsync
-        String json = response.body();
+        String json = getApiCachedResponse(ENDPOINT_TOP_250_MOVIES);
 
         List<String> titles = getPropertyList(json, "title");
         List<String> images = getPropertyList(json, "image");
@@ -45,6 +36,31 @@ public class Main {
                     images.get(i)
             );
         }
+    }
+
+    private static String getApiCachedResponse(String endpoint) throws IOException, InterruptedException {
+        String tmpdir = System.getProperty("java.io.tmpdir");
+        String filename = endpoint.replaceAll("[:/.]", "_");
+        Path filepath = Path.of("%s/dev.afonso.sevendays-java--%s.json".formatted(tmpdir, filename));
+
+        if (!Files.exists(filepath)) {
+            String finalEndpoint = ENDPOINT_TOP_250_MOVIES + API_KEY;
+
+            HttpClient client = HttpClient.newHttpClient();
+
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create(finalEndpoint))
+                    .timeout(Duration.ofSeconds(REQUEST_TIMEOUT))
+                    .GET()
+                    .build();
+
+            HttpResponse<String> response = client
+                    .send(request, BodyHandlers.ofString()); // @see sendAsync
+
+            Files.writeString(filepath, response.body());
+        }
+
+        return Files.readString(filepath);
     }
 
     private static List<String> getPropertyList(String json, String propertyName) {
