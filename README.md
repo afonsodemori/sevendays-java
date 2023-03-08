@@ -6,7 +6,7 @@ students can put in practice their knowledge solving 7 challenges, one per day, 
 
 **This repository is for the Java challenges.** Learn more and subscribe at https://7daysofcode.io/matricula/java
 
-## Day 1
+## Day 1: Consuming IMDB API
 
 On the first day, you will make your Java code consume the IMDB API, fetch the top 250 movies from their list and print
 the corresponding JSON in the console.
@@ -17,7 +17,7 @@ the corresponding JSON in the console.
 * [OpenJDK.org: Introduction to the Java HTTP Client](https://openjdk.org/groups/net/httpclient/intro.html)
 * [Java System.getProperty vs System.getenv](https://www.baeldung.com/java-system-get-property-vs-system-getenv)
 
-## Day 2
+## Day 2: Parsing the JSON response
 
 On that day, you will parse the JSON response you get from IMDB to extract its information and attributes (such as
 title, poster, rating, etc).
@@ -34,3 +34,16 @@ title, poster, rating, etc).
 
 * [Java Program to Write into a File](https://www.geeksforgeeks.org/java-program-to-write-into-a-file/)
 * [Java API: Class File ::createTempFile](https://docs.oracle.com/javase/7/docs/api/java/io/File.html#createTempFile)
+
+## Day 3: Modeling `Movie`
+
+In today's challenge, the idea will be to model, or at least start modeling your code better. A `Movie` should have the
+following attributes: `title`, `urlImage`, `rating` and `year`.
+
+Also, instead of having several lists (one for each movie attribute), it's much better to organize this into a
+single `List<Movie>`, where each movie encapsulates its own data.
+
+### References
+
+* [Java Language Updates: Records Classes](https://docs.oracle.com/en/java/javase/15/language/records.html)
+* [Java API: Interface Map<K,V>](https://docs.oracle.com/javase/8/docs/api/java/util/Map.html)
