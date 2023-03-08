@@ -19,23 +19,17 @@ public class Main {
     private static final String API_KEY = System.getenv("IMDB_API_KEY");
     private static final String ENDPOINT_TOP_250_MOVIES = "https://imdb-api.com/en/API/Top250Movies/";
 
-    // Movie Map fields
-    public static final String JSON_FIELD_TITLE = "title";
-    public static final String JSON_FIELD_YEAR = "year";
-    public static final String JSON_FIELD_RATING = "imDbRating";
-    public static final String JSON_FIELD_IMAGE = "image";
-
     public static void main(String[] args) throws IOException, InterruptedException {
         String json = getApiCachedResponse(ENDPOINT_TOP_250_MOVIES);
 
-        List<Map<String, String>> movies = getMoviesMapList(json);
+        List<Movie> movies = getMovies(json);
 
         movies.forEach(movie -> System.out.printf(
                 "%s (%s) - Rating: %s%nImage: %s%n%n",
-                movie.get(JSON_FIELD_TITLE),
-                movie.get(JSON_FIELD_YEAR),
-                movie.get(JSON_FIELD_RATING),
-                movie.get(JSON_FIELD_IMAGE)
+                movie.title(),
+                movie.year(),
+                movie.rating(),
+                movie.image()
         ));
     }
 
@@ -62,23 +56,23 @@ public class Main {
         return Files.readString(filepath);
     }
 
-    private static List<Map<String, String>> getMoviesMapList(String json) {
-        List<Map<String, String>> movies = new ArrayList<>();
+    private static List<Movie> getMovies(String json) {
+        List<Movie> movies = new ArrayList<>();
 
         // Not the best way to parse a json, of course. But...
         // @see https://github.com/FasterXML/jackson-docs and https://github.com/google/gson/blob/master/UserGuide.md
         String items = json.substring(json.indexOf("[{") + 2, json.lastIndexOf("}]"));
         String[] lines = items.split("},\\{");
 
-        Map<String, String> movie;
+        Map<String, String> movieMap;
         for (String line : lines) {
-            movie = new HashMap<>();
+            movieMap = new HashMap<>();
             String[] propertiesWithValue = line.substring(1, line.length() - 1).split("\",\"");
             for (String propertyWithValue : propertiesWithValue) {
                 String[] parts = propertyWithValue.split("\":\"");
-                movie.put(parts[0], parts[1]);
+                movieMap.put(parts[0], parts[1]);
             }
-            movies.add(movie);
+            movies.add(Movie.fromMap(movieMap));
         }
 
         return movies;
