@@ -14,28 +14,29 @@ import java.util.Map;
 
 public class Main {
 
-    private static final int REQUEST_TIMEOUT = 10;
+    // HTTP Client constants
+    private static final Duration REQUEST_TIMEOUT = Duration.ofSeconds(10);
     private static final String API_KEY = System.getenv("IMDB_API_KEY");
-    public static final String ENDPOINT_TOP_250_MOVIES = "https://imdb-api.com/en/API/Top250Movies/";
+    private static final String ENDPOINT_TOP_250_MOVIES = "https://imdb-api.com/en/API/Top250Movies/";
+
+    // Movie Map fields
+    public static final String JSON_FIELD_TITLE = "title";
+    public static final String JSON_FIELD_YEAR = "year";
+    public static final String JSON_FIELD_RATING = "imDbRating";
+    public static final String JSON_FIELD_IMAGE = "image";
 
     public static void main(String[] args) throws IOException, InterruptedException {
         String json = getApiCachedResponse(ENDPOINT_TOP_250_MOVIES);
 
-        List<String> titles = getPropertyList(json, "title");
-        List<String> images = getPropertyList(json, "image");
-        List<String> years = getPropertyList(json, "year");
-        List<String> ratings = getPropertyList(json, "imDbRating");
-        Map<String, String> map = getPropertyMap(json);
+        List<Map<String, String>> movies = getMoviesMapList(json);
 
-        for (int i = 0; i < titles.size(); i++) {
-            System.out.printf(
-                    "%s (%s) - Rating: %s%nImage: %s%n%n",
-                    titles.get(i),
-                    years.get(i),
-                    ratings.get(i),
-                    images.get(i)
-            );
-        }
+        movies.forEach(movie -> System.out.printf(
+                "%s (%s) - Rating: %s%nImage: %s%n%n",
+                movie.get(JSON_FIELD_TITLE),
+                movie.get(JSON_FIELD_YEAR),
+                movie.get(JSON_FIELD_RATING),
+                movie.get(JSON_FIELD_IMAGE)
+        ));
     }
 
     private static String getApiCachedResponse(String endpoint) throws IOException, InterruptedException {
@@ -44,13 +45,11 @@ public class Main {
         Path filepath = Path.of("%s/dev.afonso.sevendays-java--%s.json".formatted(tmpdir, filename));
 
         if (!Files.exists(filepath)) {
-            String finalEndpoint = ENDPOINT_TOP_250_MOVIES + API_KEY;
-
+            URI uri = URI.create(ENDPOINT_TOP_250_MOVIES + API_KEY);
             HttpClient client = HttpClient.newHttpClient();
-
             HttpRequest request = HttpRequest.newBuilder()
-                    .uri(URI.create(finalEndpoint))
-                    .timeout(Duration.ofSeconds(REQUEST_TIMEOUT))
+                    .uri(uri)
+                    .timeout(REQUEST_TIMEOUT)
                     .GET()
                     .build();
 
@@ -63,47 +62,25 @@ public class Main {
         return Files.readString(filepath);
     }
 
-    private static List<String> getPropertyList(String json, String propertyName) {
+    private static List<Map<String, String>> getMoviesMapList(String json) {
+        List<Map<String, String>> movies = new ArrayList<>();
+
         // Not the best way to parse a json, of course. But...
         // @see https://github.com/FasterXML/jackson-docs and https://github.com/google/gson/blob/master/UserGuide.md
-        List<String> list = new ArrayList<>();
-
         String items = json.substring(json.indexOf("[{") + 2, json.lastIndexOf("}]"));
         String[] lines = items.split("},\\{");
 
+        Map<String, String> movie;
         for (String line : lines) {
-            String[] propertiesWithValue = line.split("\",\"");
+            movie = new HashMap<>();
+            String[] propertiesWithValue = line.substring(1, line.length() - 1).split("\",\"");
             for (String propertyWithValue : propertiesWithValue) {
-                propertyWithValue = "\"" + propertyWithValue + "\"";
-                String[] parts = propertyWithValue.substring(1, propertyWithValue.length() - 1).split("\":\"");
-
-                if (parts[0].equals(propertyName)) {
-                    list.add(parts[1]);
-                }
+                String[] parts = propertyWithValue.split("\":\"");
+                movie.put(parts[0], parts[1]);
             }
+            movies.add(movie);
         }
 
-        return list;
-    }
-
-    private static Map<String, String> getPropertyMap(String json) {
-        // Not the best way to parse a json, of course. But...
-        // @see https://github.com/FasterXML/jackson-docs and https://github.com/google/gson/blob/master/UserGuide.md
-        Map<String, String> map = new HashMap<>();
-
-        String items = json.substring(json.indexOf("[{") + 2, json.lastIndexOf("}]"));
-        String[] lines = items.split("},\\{");
-
-        for (String line : lines) {
-            String[] propertiesWithValue = line.split("\",\"");
-            for (String propertyWithValue : propertiesWithValue) {
-                propertyWithValue = "\"" + propertyWithValue + "\"";
-                String[] parts = propertyWithValue.substring(1, propertyWithValue.length() - 1).split("\":\"");
-
-                map.put(parts[0], parts[1]);
-            }
-        }
-
-        return map;
+        return movies;
     }
 }
