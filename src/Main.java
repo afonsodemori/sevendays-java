@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
@@ -31,6 +32,10 @@ public class Main {
                 movie.rating(),
                 movie.image()
         ));
+
+        PrintWriter writer = new PrintWriter("out/movies.html");
+        new HTMLGenerator(writer).generate(movies);
+        writer.close();
     }
 
     private static String getApiCachedResponse(String endpoint) throws IOException, InterruptedException {
