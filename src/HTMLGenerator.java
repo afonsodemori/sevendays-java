@@ -1,4 +1,3 @@
-import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
@@ -9,7 +8,7 @@ public class HTMLGenerator {
         this.writer = writer;
     }
 
-    public void generate(List<Movie> movies) throws IOException {
+    public void generate(List<Movie> movies) {
         // Generating here the HTML is not a good idea, but it's for studying purposes...
         writer.write(getHeaderTemplate());
 
