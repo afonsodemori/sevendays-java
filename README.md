@@ -28,7 +28,7 @@ title, poster, rating, etc).
 
 ### Screenshot
 
-![Result of the execution of the code for the 2nd day](docs/images/day-2-screenshot-run.png)
+![Day 2: Console output](docs/images/day-2-screenshot-run.png)
 
 ### References
 
@@ -47,3 +47,19 @@ single `List<Movie>`, where each movie encapsulates its own data.
 
 * [Java Language Updates: Records Classes](https://docs.oracle.com/en/java/javase/15/language/records.html)
 * [Java API: Interface Map<K,V>](https://docs.oracle.com/javase/8/docs/api/java/util/Map.html)
+
+## Day 4: Generating an HTML page
+
+In the day four you're going to generate an HTML page from the list of objects you already have in your Java code. The
+HTML page will have the information about the movie, including the poster, something like:
+
+![Movie information sample](docs/images/day-4-thumbnail-sample.png)
+
+### Screenshot
+
+![Day 4: Movies list](docs/images/day-4-movies-list.png)
+_— See this page at https://afonsodemori.github.io/sevendays-java/day-4-movies.html_
+
+### References
+
+* [Java API: Class PrintWriter](https://docs.oracle.com/javase/7/docs/api/java/io/PrintWriter.html)

@@ -1,0 +1,1860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Top 250 Movies - IMDB</title>
+    <style>
+    * {
+        box-sizing: border-box;
+    }
+    html {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        margin: auto;
+        padding: 0 5em;
+        max-width: 1600px;
+        font: normal 1em Arial;
+        color: #fff;
+        background: #0d1218;
+    }
+    header {
+        padding: 3em 1em;
+        border-bottom: 1px solid #000;
+        text-align: center;
+    }
+    .container {
+        margin: 3em 0;
+    }
+    .card {
+        float: left;
+        position: relative;
+        margin: .5em;
+        width: 200px;
+        height: 272px;
+        border: 2px solid transparent;
+        overflow: hidden;
+        transition: 200ms;
+    }
+    .card:hover {
+        transform: scale(1.5);
+        z-index: 1;
+        cursor: default;
+        border-radius: 3px;
+        box-shadow: 0 0 50px 15px rgba(1, 1, 1, .8);
+        border-radius: 3px;
+        border-color: #0d8cbc;
+    }
+    .card:hover .info {
+        opacity: 1;
+    }
+    .card:hover img {
+        background: #000;
+    }
+    img {
+        width: 100%;
+        padding: 2px;
+        transition: 200ms;
+    }
+    .info {
+        position: absolute;
+        padding: .5em;
+        padding-top: 4em;
+        background: rgba(1, 1, 1, .8);
+        background: linear-gradient(180deg, rgba(1, 1, 1, 0) 0%, rgba(1, 1, 1, .9) 50%);
+        opacity: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        text-shadow: 1px 1px 1px #000;
+    }
+    .info p {
+        margin: 0 .2em;
+        font-size: .8em;
+    }
+    .clear {
+        clear: both;
+    }
+    footer {
+        border-top: 1px solid #000;
+        padding: 2em;
+        text-align: center;
+        color: #000;
+    }
+    footer a {
+        padding: .5em;
+        color: #0d8cbc;
+    }
+    footer a:hover {
+        background: #0d8cbc;
+        text-decoration: none;
+        color: #000;
+    }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Top 250 Movies IMDB</h1>
+</header>
+<div class="container">
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Shawshank Redemption">
+        <div class="info">
+            <h3>The Shawshank Redemption</h3>
+            <p>Year: 1994 | Rating: 9.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Godfather">
+        <div class="info">
+            <h3>The Godfather</h3>
+            <p>Year: 1972 | Rating: 9.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Dark Knight">
+        <div class="info">
+            <h3>The Dark Knight</h3>
+            <p>Year: 2008 | Rating: 9.0</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMWMwMGQzZTItY2JlNC00OWZiLWIyMDctNDk2ZDQ2YjRjMWQ0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Godfather Part II">
+        <div class="info">
+            <h3>The Godfather Part II</h3>
+            <p>Year: 1974 | Rating: 9.0</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMWU4N2FjNzYtNTVkNC00NzQ0LTg0MjAtYTJlMjFhNGUxZDFmXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: 12 Angry Men">
+        <div class="info">
+            <h3>12 Angry Men</h3>
+            <p>Year: 1957 | Rating: 9.0</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNDE4OTMxMTctNmRhYy00NWE2LTg3YzItYTk3M2UwOTU5Njg4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Schindler's List">
+        <div class="info">
+            <h3>Schindler's List</h3>
+            <p>Year: 1993 | Rating: 8.9</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Lord of the Rings: The Return of the King">
+        <div class="info">
+            <h3>The Lord of the Rings: The Return of the King</h3>
+            <p>Year: 2003 | Rating: 8.9</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Pulp Fiction">
+        <div class="info">
+            <h3>Pulp Fiction</h3>
+            <p>Year: 1994 | Rating: 8.8</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Lord of the Rings: The Fellowship of the Ring">
+        <div class="info">
+            <h3>The Lord of the Rings: The Fellowship of the Ring</h3>
+            <p>Year: 2001 | Rating: 8.8</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNjJlYmNkZGItM2NhYy00MjlmLTk5NmQtNjg1NmM2ODU4OTMwXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Good, the Bad and the Ugly">
+        <div class="info">
+            <h3>The Good, the Bad and the Ugly</h3>
+            <p>Year: 1966 | Rating: 8.8</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Forrest Gump">
+        <div class="info">
+            <h3>Forrest Gump</h3>
+            <p>Year: 1994 | Rating: 8.8</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNDIzNDU0YzEtYzE5Ni00ZjlkLTk5ZjgtNjM3NWE4YzA3Nzk3XkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Fight Club">
+        <div class="info">
+            <h3>Fight Club</h3>
+            <p>Year: 1999 | Rating: 8.7</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BZGMxZTdjZmYtMmE2Ni00ZTdkLWI5NTgtNjlmMjBiNzU2MmI5XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Lord of the Rings: The Two Towers">
+        <div class="info">
+            <h3>The Lord of the Rings: The Two Towers</h3>
+            <p>Year: 2002 | Rating: 8.7</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Inception">
+        <div class="info">
+            <h3>Inception</h3>
+            <p>Year: 2010 | Rating: 8.7</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BYmU1NDRjNDgtMzhiMi00NjZmLTg5NGItZDNiZjU5NTU4OTE0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Star Wars: Episode V - The Empire Strikes Back">
+        <div class="info">
+            <h3>Star Wars: Episode V - The Empire Strikes Back</h3>
+            <p>Year: 1980 | Rating: 8.7</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Matrix">
+        <div class="info">
+            <h3>The Matrix</h3>
+            <p>Year: 1999 | Rating: 8.7</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BY2NkZjEzMDgtN2RjYy00YzM1LWI4ZmQtMjIwYjFjNmI3ZGEwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Goodfellas">
+        <div class="info">
+            <h3>Goodfellas</h3>
+            <p>Year: 1990 | Rating: 8.7</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BZjA0OWVhOTAtYWQxNi00YzNhLWI4ZjYtNjFjZTEyYjJlNDVlL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: One Flew Over the Cuckoo's Nest">
+        <div class="info">
+            <h3>One Flew Over the Cuckoo's Nest</h3>
+            <p>Year: 1975 | Rating: 8.6</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BOTUwODM5MTctZjczMi00OTk4LTg3NWUtNmVhMTAzNTNjYjcyXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Se7en">
+        <div class="info">
+            <h3>Se7en</h3>
+            <p>Year: 1995 | Rating: 8.6</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNWQ3OTM4ZGItMWEwZi00MjI5LWI3YzgtNTYwNWRkNmIzMGI5XkEyXkFqcGdeQXVyNDY2MTk1ODk@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Seven Samurai">
+        <div class="info">
+            <h3>Seven Samurai</h3>
+            <p>Year: 1954 | Rating: 8.6</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BZjc4NDZhZWMtNGEzYS00ZWU2LThlM2ItNTA0YzQ0OTExMTE2XkEyXkFqcGdeQXVyNjUwMzI2NzU@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: It's a Wonderful Life">
+        <div class="info">
+            <h3>It's a Wonderful Life</h3>
+            <p>Year: 1946 | Rating: 8.6</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNjNhZTk0ZmEtNjJhMi00YzFlLWE1MmEtYzM1M2ZmMGMwMTU4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Silence of the Lambs">
+        <div class="info">
+            <h3>The Silence of the Lambs</h3>
+            <p>Year: 1991 | Rating: 8.6</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BZjhkMDM4MWItZTVjOC00ZDRhLThmYTAtM2I5NzBmNmNlMzI1XkEyXkFqcGdeQXVyNDYyMDk5MTU@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Saving Private Ryan">
+        <div class="info">
+            <h3>Saving Private Ryan</h3>
+            <p>Year: 1998 | Rating: 8.6</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BOTMwYjc5ZmItYTFjZC00ZGQ3LTlkNTMtMjZiNTZlMWQzNzI5XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: City of God">
+        <div class="info">
+            <h3>City of God</h3>
+            <p>Year: 2002 | Rating: 8.6</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Interstellar">
+        <div class="info">
+            <h3>Interstellar</h3>
+            <p>Year: 2014 | Rating: 8.6</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BYmJmM2Q4NmMtYThmNC00ZjRlLWEyZmItZTIwOTBlZDQ3NTQ1XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Life Is Beautiful">
+        <div class="info">
+            <h3>Life Is Beautiful</h3>
+            <p>Year: 1997 | Rating: 8.6</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMTUxMzQyNjA5MF5BMl5BanBnXkFtZTYwOTU2NTY3._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Green Mile">
+        <div class="info">
+            <h3>The Green Mile</h3>
+            <p>Year: 1999 | Rating: 8.6</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BOTA5NjhiOTAtZWM0ZC00MWNhLThiMzEtZDFkOTk2OTU1ZDJkXkEyXkFqcGdeQXVyMTA4NDI1NTQx._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Star Wars: Episode IV - A New Hope">
+        <div class="info">
+            <h3>Star Wars: Episode IV - A New Hope</h3>
+            <p>Year: 1977 | Rating: 8.5</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMGU2NzRmZjUtOGUxYS00ZjdjLWEwZWItY2NlM2JhNjkxNTFmXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Terminator 2: Judgment Day">
+        <div class="info">
+            <h3>Terminator 2: Judgment Day</h3>
+            <p>Year: 1991 | Rating: 8.5</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BZmU0M2Y1OGUtZjIxNi00ZjBkLTg1MjgtOWIyNThiZWIwYjRiXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Back to the Future">
+        <div class="info">
+            <h3>Back to the Future</h3>
+            <p>Year: 1985 | Rating: 8.5</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMjlmZmI5MDctNDE2YS00YWE0LWE5ZWItZDBhYWQ0NTcxNWRhXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Spirited Away">
+        <div class="info">
+            <h3>Spirited Away</h3>
+            <p>Year: 2001 | Rating: 8.5</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BOWRiZDIxZjktMTA1NC00MDQ2LWEzMjUtMTliZmY3NjQ3ODJiXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Pianist">
+        <div class="info">
+            <h3>The Pianist</h3>
+            <p>Year: 2002 | Rating: 8.5</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNTQwNDM1YzItNDAxZC00NWY2LTk0M2UtNDIwNWI5OGUyNWUxXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Psycho">
+        <div class="info">
+            <h3>Psycho</h3>
+            <p>Year: 1960 | Rating: 8.5</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Parasite">
+        <div class="info">
+            <h3>Parasite</h3>
+            <p>Year: 2019 | Rating: 8.5</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BOTgyMWQ0ZWUtN2Q2MS00NmY0LWI3OWMtNjFkMzZlNDZjNTk0XkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Léon: The Professional">
+        <div class="info">
+            <h3>Léon: The Professional</h3>
+            <p>Year: 1994 | Rating: 8.5</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BYTYxNGMyZTYtMjE3MS00MzNjLWFjNmYtMDk3N2FmM2JiM2M1XkEyXkFqcGdeQXVyNjY5NDU4NzI@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Lion King">
+        <div class="info">
+            <h3>The Lion King</h3>
+            <p>Year: 1994 | Rating: 8.5</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMDliMmNhNDEtODUyOS00MjNlLTgxODEtN2U3NzIxMGVkZTA1L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Gladiator">
+        <div class="info">
+            <h3>Gladiator</h3>
+            <p>Year: 2000 | Rating: 8.5</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BZTJhN2FkYWEtMGI0My00YWM4LWI2MjAtM2UwNjY4MTI2ZTQyXkEyXkFqcGdeQXVyNjc3MjQzNTI@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: American History X">
+        <div class="info">
+            <h3>American History X</h3>
+            <p>Year: 1998 | Rating: 8.5</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMTI1MTY2OTIxNV5BMl5BanBnXkFtZTYwNjQ4NjY3._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Departed">
+        <div class="info">
+            <h3>The Departed</h3>
+            <p>Year: 2006 | Rating: 8.5</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BYTViNjMyNmUtNDFkNC00ZDRlLThmMDUtZDU2YWE4NGI2ZjVmXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Usual Suspects">
+        <div class="info">
+            <h3>The Usual Suspects</h3>
+            <p>Year: 1995 | Rating: 8.5</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMjA4NDI0MTIxNF5BMl5BanBnXkFtZTYwNTM0MzY2._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Prestige">
+        <div class="info">
+            <h3>The Prestige</h3>
+            <p>Year: 2006 | Rating: 8.5</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BOTA5NDZlZGUtMjAxOS00YTRkLTkwYmMtYWQ0NWEwZDZiNjEzXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Whiplash">
+        <div class="info">
+            <h3>Whiplash</h3>
+            <p>Year: 2014 | Rating: 8.5</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BY2IzZGY2YmEtYzljNS00NTM5LTgwMzUtMzM1NjQ4NGI0OTk0XkEyXkFqcGdeQXVyNDYyMDk5MTU@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Casablanca">
+        <div class="info">
+            <h3>Casablanca</h3>
+            <p>Year: 1942 | Rating: 8.5</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BZmY2NjUzNDQtNTgxNC00M2Q4LTljOWQtMjNjNDBjNWUxNmJlXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Grave of the Fireflies">
+        <div class="info">
+            <h3>Grave of the Fireflies</h3>
+            <p>Year: 1988 | Rating: 8.5</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BYjBmYTQ1NjItZWU5MS00YjI0LTg2OTYtYmFkN2JkMmNiNWVkXkEyXkFqcGdeQXVyMTMxMTY0OTQ@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Harakiri">
+        <div class="info">
+            <h3>Harakiri</h3>
+            <p>Year: 1962 | Rating: 8.5</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMTYxNDA3MDQwNl5BMl5BanBnXkFtZTcwNTU4Mzc1Nw@@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Intouchables">
+        <div class="info">
+            <h3>The Intouchables</h3>
+            <p>Year: 2011 | Rating: 8.5</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BYjJiZjMzYzktNjU0NS00OTkxLWEwYzItYzdhYWJjN2QzMTRlL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Modern Times">
+        <div class="info">
+            <h3>Modern Times</h3>
+            <p>Year: 1936 | Rating: 8.4</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BODQ3NDExOGYtMzI3Mi00NWRlLTkwNjAtNjc4MDgzZGJiZTA1XkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Once Upon a Time in the West">
+        <div class="info">
+            <h3>Once Upon a Time in the West</h3>
+            <p>Year: 1968 | Rating: 8.4</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BM2FhYjEyYmYtMDI1Yy00YTdlLWI2NWQtYmEzNzAxOGY1NjY2XkEyXkFqcGdeQXVyNTA3NTIyNDg@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Cinema Paradiso">
+        <div class="info">
+            <h3>Cinema Paradiso</h3>
+            <p>Year: 1988 | Rating: 8.4</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNGUxYWM3M2MtMGM3Mi00ZmRiLWE0NGQtZjE5ODI2OTJhNTU0XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Rear Window">
+        <div class="info">
+            <h3>Rear Window</h3>
+            <p>Year: 1954 | Rating: 8.4</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BOGQzZTBjMjQtOTVmMS00NGE5LWEyYmMtOGQ1ZGZjNmRkYjFhXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Alien">
+        <div class="info">
+            <h3>Alien</h3>
+            <p>Year: 1979 | Rating: 8.4</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BY2I4MmM1N2EtM2YzOS00OWUzLTkzYzctNDc5NDg2N2IyODJmXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: City Lights">
+        <div class="info">
+            <h3>City Lights</h3>
+            <p>Year: 1931 | Rating: 8.4</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BYmQyNTA1ZGItNjZjMi00NzFlLWEzMWEtNWMwN2Q2MjJhYzEyXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Apocalypse Now">
+        <div class="info">
+            <h3>Apocalypse Now</h3>
+            <p>Year: 1979 | Rating: 8.4</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BZTcyNjk1MjgtOWI3Mi00YzQwLWI5MTktMzY4ZmI2NDAyNzYzXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Memento">
+        <div class="info">
+            <h3>Memento</h3>
+            <p>Year: 2000 | Rating: 8.4</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMjIyNTQ5NjQ1OV5BMl5BanBnXkFtZTcwODg1MDU4OA@@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Django Unchained">
+        <div class="info">
+            <h3>Django Unchained</h3>
+            <p>Year: 2012 | Rating: 8.4</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNTU2ODkyY2MtMjU1NC00NjE1LWEzYjgtMWQ3MzRhMTE0NDc0XkEyXkFqcGdeQXVyMjM4MzQ4OTQ@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Indiana Jones and the Raiders of the Lost Ark">
+        <div class="info">
+            <h3>Indiana Jones and the Raiders of the Lost Ark</h3>
+            <p>Year: 1981 | Rating: 8.4</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMjExMTg5OTU0NF5BMl5BanBnXkFtZTcwMjMxMzMzMw@@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: WALL·E">
+        <div class="info">
+            <h3>WALL·E</h3>
+            <p>Year: 2008 | Rating: 8.4</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNmQyNmJjM2ItNTQzYi00ZjMxLWFjMDYtZjUyN2YwZDk5YWQ2XkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Lives of Others">
+        <div class="info">
+            <h3>The Lives of Others</h3>
+            <p>Year: 2006 | Rating: 8.4</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMTU0NTkyNzYwMF5BMl5BanBnXkFtZTgwMDU0NDk5MTI@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Sunset Blvd.">
+        <div class="info">
+            <h3>Sunset Blvd.</h3>
+            <p>Year: 1950 | Rating: 8.4</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BOTI5Nzc0OTMtYzBkMS00NjkxLThmM2UtNjM2ODgxN2M5NjNkXkEyXkFqcGdeQXVyNjQ2MjQ5NzM@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Paths of Glory">
+        <div class="info">
+            <h3>Paths of Glory</h3>
+            <p>Year: 1957 | Rating: 8.4</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BZWFlYmY2MGEtZjVkYS00YzU4LTg0YjQtYzY1ZGE3NTA5NGQxXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Shining">
+        <div class="info">
+            <h3>The Shining</h3>
+            <p>Year: 1980 | Rating: 8.4</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMmExYWJjNTktNGUyZS00ODhmLTkxYzAtNWIzOGEyMGNiMmUwXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Great Dictator">
+        <div class="info">
+            <h3>The Great Dictator</h3>
+            <p>Year: 1940 | Rating: 8.4</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Avengers: Infinity War">
+        <div class="info">
+            <h3>Avengers: Infinity War</h3>
+            <p>Year: 2018 | Rating: 8.4</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNDQwODU5OWYtNDcyNi00MDQ1LThiOGMtZDkwNWJiM2Y3MDg0XkEyXkFqcGdeQXVyMDI2NDg0NQ@@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Witness for the Prosecution">
+        <div class="info">
+            <h3>Witness for the Prosecution</h3>
+            <p>Year: 1957 | Rating: 8.4</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BZTM1Nzk5ZTItN2ZkNi00MDRjLWIwYWUtOWY4ZjZmZjkyM2I0XkEyXkFqcGdeQXVyNTU1NTcwOTk@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Aliens">
+        <div class="info">
+            <h3>Aliens</h3>
+            <p>Year: 1986 | Rating: 8.3</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMjMwNDkxMTgzOF5BMl5BanBnXkFtZTgwNTkwNTQ3NjM@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Spider-Man: Into the Spider-Verse">
+        <div class="info">
+            <h3>Spider-Man: Into the Spider-Verse</h3>
+            <p>Year: 2018 | Rating: 8.3</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNTBmZWJkNjctNDhiNC00MGE2LWEwOTctZTk5OGVhMWMyNmVhXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: American Beauty">
+        <div class="info">
+            <h3>American Beauty</h3>
+            <p>Year: 1999 | Rating: 8.3</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BZWI3ZTMxNjctMjdlNS00NmUwLWFiM2YtZDUyY2I3N2MxYTE0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb">
+        <div class="info">
+            <h3>Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb</h3>
+            <p>Year: 1964 | Rating: 8.3</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMTk4ODQzNDY3Ml5BMl5BanBnXkFtZTcwODA0NTM4Nw@@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Dark Knight Rises">
+        <div class="info">
+            <h3>The Dark Knight Rises</h3>
+            <p>Year: 2012 | Rating: 8.3</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMTI3NTQyMzU5M15BMl5BanBnXkFtZTcwMTM2MjgyMQ@@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Oldboy">
+        <div class="info">
+            <h3>Oldboy</h3>
+            <p>Year: 2003 | Rating: 8.3</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BOTJiNDEzOWYtMTVjOC00ZjlmLWE0NGMtZmE1OWVmZDQ2OWJhXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Inglourious Basterds">
+        <div class="info">
+            <h3>Inglourious Basterds</h3>
+            <p>Year: 2009 | Rating: 8.3</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNWJlNzUzNGMtYTAwMS00ZjI2LWFmNWQtODcxNWUxODA5YmU1XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Amadeus">
+        <div class="info">
+            <h3>Amadeus</h3>
+            <p>Year: 1984 | Rating: 8.3</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BYjQ5NjM0Y2YtNjZkNC00ZDhkLWJjMWItN2QyNzFkMDE3ZjAxXkEyXkFqcGdeQXVyODIxMzk5NjA@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Coco">
+        <div class="info">
+            <h3>Coco</h3>
+            <p>Year: 2017 | Rating: 8.3</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMDU2ZWJlMjktMTRhMy00ZTA5LWEzNDgtYmNmZTEwZTViZWJkXkEyXkFqcGdeQXVyNDQ2OTk4MzI@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Toy Story">
+        <div class="info">
+            <h3>Toy Story</h3>
+            <p>Year: 1995 | Rating: 8.3</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Joker">
+        <div class="info">
+            <h3>Joker</h3>
+            <p>Year: 2019 | Rating: 8.3</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMzkzMmU0YTYtOWM3My00YzBmLWI0YzctOGYyNTkwMWE5MTJkXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Braveheart">
+        <div class="info">
+            <h3>Braveheart</h3>
+            <p>Year: 1995 | Rating: 8.3</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNDBjMWUxNTUtNjZiNi00YzJhLTgzNzUtMTRiY2FkZmMzYTNjXkEyXkFqcGdeQXVyMTUzMDUzNTI3._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Boat">
+        <div class="info">
+            <h3>The Boat</h3>
+            <p>Year: 1981 | Rating: 8.3</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Avengers: Endgame">
+        <div class="info">
+            <h3>Avengers: Endgame</h3>
+            <p>Year: 2019 | Rating: 8.3</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNTZkYmI0MmEtNGFlZC00OWZjLWFjMmItMjk1OWZkOWJiZGVjXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Princess Mononoke">
+        <div class="info">
+            <h3>Princess Mononoke</h3>
+            <p>Year: 1997 | Rating: 8.3</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMGFkNWI4MTMtNGQ0OC00MWVmLTk3MTktOGYxN2Y2YWVkZWE2XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Once Upon a Time in America">
+        <div class="info">
+            <h3>Once Upon a Time in America</h3>
+            <p>Year: 1984 | Rating: 8.3</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BOTI0MzcxMTYtZDVkMy00NjY1LTgyMTYtZmUxN2M3NmQ2NWJhXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Good Will Hunting">
+        <div class="info">
+            <h3>Good Will Hunting</h3>
+            <p>Year: 1997 | Rating: 8.3</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BODRmZDVmNzUtZDA4ZC00NjhkLWI2M2UtN2M0ZDIzNDcxYThjL2ltYWdlXkEyXkFqcGdeQXVyNTk0MzMzODA@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Your Name.">
+        <div class="info">
+            <h3>Your Name.</h3>
+            <p>Year: 2016 | Rating: 8.3</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BZDRjNGViMjQtOThlMi00MTA3LThkYzQtNzJkYjBkMGE0YzE1XkEyXkFqcGdeQXVyNDYyMDk5MTU@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Singin' in the Rain">
+        <div class="info">
+            <h3>Singin' in the Rain</h3>
+            <p>Year: 1952 | Rating: 8.3</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNTkyOGVjMGEtNmQzZi00NzFlLTlhOWQtODYyMDc2ZGJmYzFhXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: 3 Idiots">
+        <div class="info">
+            <h3>3 Idiots</h3>
+            <p>Year: 2009 | Rating: 8.3</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BOTdiNzJlOWUtNWMwNS00NmFlLWI0YTEtZmI3YjIzZWUyY2Y3XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Requiem for a Dream">
+        <div class="info">
+            <h3>Requiem for a Dream</h3>
+            <p>Year: 2000 | Rating: 8.3</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BOTI4NTNhZDMtMWNkZi00MTRmLWJmZDQtMmJkMGVmZTEzODlhXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: High and Low">
+        <div class="info">
+            <h3>High and Low</h3>
+            <p>Year: 1963 | Rating: 8.3</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMTgxOTY4Mjc0MF5BMl5BanBnXkFtZTcwNTA4MDQyMw@@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Toy Story 3">
+        <div class="info">
+            <h3>Toy Story 3</h3>
+            <p>Year: 2010 | Rating: 8.3</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BY2Y3OWNkMTctYzNjYS00NWVkLTg4OWEtY2YxN2I3NDhlYzE0XkEyXkFqcGdeQXVyMTI3ODAyMzE2._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Capernaum">
+        <div class="info">
+            <h3>Capernaum</h3>
+            <p>Year: 2018 | Rating: 8.3</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BOWZlMjFiYzgtMTUzNC00Y2IzLTk1NTMtZmNhMTczNTk0ODk1XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Star Wars: Episode VI - Return of the Jedi">
+        <div class="info">
+            <h3>Star Wars: Episode VI - Return of the Jedi</h3>
+            <p>Year: 1983 | Rating: 8.3</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMmNlYzRiNDctZWNhMi00MzI4LThkZTctMTUzMmZkMmFmNThmXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: 2001: A Space Odyssey">
+        <div class="info">
+            <h3>2001: A Space Odyssey</h3>
+            <p>Year: 1968 | Rating: 8.3</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMTY4NzcwODg3Nl5BMl5BanBnXkFtZTcwNTEwOTMyMw@@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Eternal Sunshine of the Spotless Mind">
+        <div class="info">
+            <h3>Eternal Sunshine of the Spotless Mind</h3>
+            <p>Year: 2004 | Rating: 8.3</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BZmExNmEwYWItYmQzOS00YjA5LTk2MjktZjEyZDE1Y2QxNjA1XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Reservoir Dogs">
+        <div class="info">
+            <h3>Reservoir Dogs</h3>
+            <p>Year: 1992 | Rating: 8.3</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BODM4Njg0NTAtYjI5Ny00ZjAxLTkwNmItZTMxMWU5M2U3M2RjXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Come and See">
+        <div class="info">
+            <h3>Come and See</h3>
+            <p>Year: 1985 | Rating: 8.3</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMTg2NDg3ODg4NF5BMl5BanBnXkFtZTcwNzk3NTc3Nw@@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Hunt">
+        <div class="info">
+            <h3>The Hunt</h3>
+            <p>Year: 2012 | Rating: 8.3</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BYjBiOTYxZWItMzdiZi00NjlkLWIzZTYtYmFhZjhiMTljOTdkXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Citizen Kane">
+        <div class="info">
+            <h3>Citizen Kane</h3>
+            <p>Year: 1941 | Rating: 8.3</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BODA4ODk3OTEzMF5BMl5BanBnXkFtZTgwMTQ2ODMwMzE@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: M">
+        <div class="info">
+            <h3>M</h3>
+            <p>Year: 1931 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BYWY5ZjhjNGYtZmI2Ny00ODM0LWFkNzgtZmI1YzA2N2MxMzA0XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Lawrence of Arabia">
+        <div class="info">
+            <h3>Lawrence of Arabia</h3>
+            <p>Year: 1962 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BZDA3NDExMTUtMDlhOC00MmQ5LWExZGUtYmI1NGVlZWI4OWNiXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: North by Northwest">
+        <div class="info">
+            <h3>North by Northwest</h3>
+            <p>Year: 1959 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BZmM0NGY3Y2MtMTA1YS00YmQzLTk2YTctYWFhMDkzMDRjZWQzXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Ikiru">
+        <div class="info">
+            <h3>Ikiru</h3>
+            <p>Year: 1952 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BYTE4ODEwZDUtNDFjOC00NjAxLWEzYTQtYTI1NGVmZmFlNjdiL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Vertigo">
+        <div class="info">
+            <h3>Vertigo</h3>
+            <p>Year: 1958 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNzkwODFjNzItMmMwNi00MTU5LWE2MzktM2M4ZDczZGM1MmViXkEyXkFqcGdeQXVyNDY2MTk1ODk@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Apartment">
+        <div class="info">
+            <h3>The Apartment</h3>
+            <p>Year: 1960 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNDg4NjM1YjMtYmNhZC00MjM0LWFiZmYtNGY1YjA3MzZmODc5XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Amélie">
+        <div class="info">
+            <h3>Amélie</h3>
+            <p>Year: 2001 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMTY3MjM1Mzc4N15BMl5BanBnXkFtZTgwODM0NzAxMDE@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: A Clockwork Orange">
+        <div class="info">
+            <h3>A Clockwork Orange</h3>
+            <p>Year: 1971 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BOTdlNjgyZGUtOTczYi00MDdhLTljZmMtYTEwZmRiOWFkYjRhXkEyXkFqcGdeQXVyNDY2MTk1ODk@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Double Indemnity">
+        <div class="info">
+            <h3>Double Indemnity</h3>
+            <p>Year: 1944 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNzkxODk0NjEtYjc4Mi00ZDI0LTgyYjEtYzc1NDkxY2YzYTgyXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Full Metal Jacket">
+        <div class="info">
+            <h3>Full Metal Jacket</h3>
+            <p>Year: 1987 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNjdjNGQ4NDEtNTEwYS00MTgxLTliYzQtYzE2ZDRiZjFhZmNlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Scarface">
+        <div class="info">
+            <h3>Scarface</h3>
+            <p>Year: 1983 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNjViNWRjYWEtZTI0NC00N2E3LTk0NGQtMjY4NTM3OGNkZjY0XkEyXkFqcGdeQXVyMjUxMTY3ODM@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Hamilton">
+        <div class="info">
+            <h3>Hamilton</h3>
+            <p>Year: 2020 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMWE3MGYzZjktY2Q5Mi00Y2NiLWIyYWUtMmIyNzA3YmZlMGFhXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Incendies">
+        <div class="info">
+            <h3>Incendies</h3>
+            <p>Year: 2010 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BYjZjNTJlZGUtZTE1Ny00ZDc4LTgwYjUtMzk0NDgwYzZjYTk1XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Heat">
+        <div class="info">
+            <h3>Heat</h3>
+            <p>Year: 1995 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNmVmYzcwNzMtMWM1NS00MWIyLThlMDEtYzUwZDgzODE1NmE2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: To Kill a Mockingbird">
+        <div class="info">
+            <h3>To Kill a Mockingbird</h3>
+            <p>Year: 1962 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNGU3NjQ4YTMtZGJjOS00YTQ3LThmNmItMTI5MDE2ODI3NzY3XkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Sting">
+        <div class="info">
+            <h3>The Sting</h3>
+            <p>Year: 1973 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMTk3NDE2NzI4NF5BMl5BanBnXkFtZTgwNzE1MzEyMTE@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Up">
+        <div class="info">
+            <h3>Up</h3>
+            <p>Year: 2009 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Top Gun: Maverick">
+        <div class="info">
+            <h3>Top Gun: Maverick</h3>
+            <p>Year: 2022 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BN2JmMjViMjMtZTM5Mi00ZGZkLTk5YzctZDg5MjFjZDE4NjNkXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: A Separation">
+        <div class="info">
+            <h3>A Separation</h3>
+            <p>Year: 2011 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMTg5YWIyMWUtZDY5My00Zjc1LTljOTctYmI0MWRmY2M2NmRkXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Metropolis">
+        <div class="info">
+            <h3>Metropolis</h3>
+            <p>Year: 1927 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BM2M1MmVhNDgtNmI0YS00ZDNmLTkyNjctNTJiYTQ2N2NmYzc2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Taxi Driver">
+        <div class="info">
+            <h3>Taxi Driver</h3>
+            <p>Year: 1976 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMDQ2YzEyZGItYWRhOS00MjBmLTkzMDUtMTdjYzkyMmQxZTJlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: L.A. Confidential">
+        <div class="info">
+            <h3>L.A. Confidential</h3>
+            <p>Year: 1997 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BZjRlNDUxZjAtOGQ4OC00OTNlLTgxNmQtYTBmMDgwZmNmNjkxXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Die Hard">
+        <div class="info">
+            <h3>Die Hard</h3>
+            <p>Year: 1988 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMTA2NDYxOGYtYjU1Mi00Y2QzLTgxMTQtMWI1MGI0ZGQ5MmU4XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Snatch">
+        <div class="info">
+            <h3>Snatch</h3>
+            <p>Year: 2000 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BY2Q0ODg4ZmItNDZiYi00ZWY5LTg2NzctNmYwZjA5OThmNzE1XkEyXkFqcGdeQXVyMjM4MzQ4OTQ@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Indiana Jones and the Last Crusade">
+        <div class="info">
+            <h3>Indiana Jones and the Last Crusade</h3>
+            <p>Year: 1989 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNmI1ODdjODctMDlmMC00ZWViLWI5MzYtYzRhNDdjYmM3MzFjXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Bicycle Thieves">
+        <div class="info">
+            <h3>Bicycle Thieves</h3>
+            <p>Year: 1948 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMDhjZWViN2MtNzgxOS00NmI4LThiZDQtZDI3MzM4MDE4NTc0XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Like Stars on Earth">
+        <div class="info">
+            <h3>Like Stars on Earth</h3>
+            <p>Year: 2007 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BOTdmNTFjNDEtNzg0My00ZjkxLTg1ZDAtZTdkMDc2ZmFiNWQ1XkEyXkFqcGdeQXVyNTAzNzgwNTg@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: 1917">
+        <div class="info">
+            <h3>1917</h3>
+            <p>Year: 2019 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMTU0NTU5NTAyMl5BMl5BanBnXkFtZTYwNzYwMDg2._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Downfall">
+        <div class="info">
+            <h3>Downfall</h3>
+            <p>Year: 2004 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMTQ4MzQzMzM2Nl5BMl5BanBnXkFtZTgwMTQ1NzU3MDI@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Dangal">
+        <div class="info">
+            <h3>Dangal</h3>
+            <p>Year: 2016 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMzJlZTNkYjQtMTE1OS00YTJlLTgxNjItYzg4NTllODdkMzBiXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: For a Few Dollars More">
+        <div class="info">
+            <h3>For a Few Dollars More</h3>
+            <p>Year: 1965 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BOTY4YjI2N2MtYmFlMC00ZjcyLTg3YjEtMDQyM2ZjYzQ5YWFkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Batman Begins">
+        <div class="info">
+            <h3>Batman Begins</h3>
+            <p>Year: 2005 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BZjhhMThhNDItNTY2MC00MmU1LTliNDEtNDdhZjdlNTY5ZDQ1XkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Kid">
+        <div class="info">
+            <h3>The Kid</h3>
+            <p>Year: 1921 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNzAyOGIxYjAtMGY2NC00ZTgyLWIwMWEtYzY0OWQ4NDFjOTc5XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Some Like It Hot">
+        <div class="info">
+            <h3>Some Like It Hot</h3>
+            <p>Year: 1959 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BZGJhNWRiOWQtMjI4OS00ZjcxLTgwMTAtMzQ2ODkxY2JkOTVlXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Father">
+        <div class="info">
+            <h3>The Father</h3>
+            <p>Year: 2020 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMTY2MTAzODI5NV5BMl5BanBnXkFtZTgwMjM4NzQ0MjE@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: All About Eve">
+        <div class="info">
+            <h3>All About Eve</h3>
+            <p>Year: 1950 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMjIxMjgxNTk0MF5BMl5BanBnXkFtZTgwNjIyOTg2MDE@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Wolf of Wall Street">
+        <div class="info">
+            <h3>The Wolf of Wall Street</h3>
+            <p>Year: 2013 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BYzIzYmJlYTYtNGNiYy00N2EwLTk4ZjItMGYyZTJiOTVkM2RlXkEyXkFqcGdeQXVyODY1NDk1NjE@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Green Book">
+        <div class="info">
+            <h3>Green Book</h3>
+            <p>Year: 2018 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNDc2ODQ5NTE2MV5BMl5BanBnXkFtZTcwODExMjUyNA@@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Judgment at Nuremberg">
+        <div class="info">
+            <h3>Judgment at Nuremberg</h3>
+            <p>Year: 1961 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMmU1NGYwZWYtOWExNi00ZTEyLTgwMmUtM2ZlMDVjNWM4YjVlXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Ran">
+        <div class="info">
+            <h3>Ran</h3>
+            <p>Year: 1985 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMTcxOWYzNDYtYmM4YS00N2NkLTk0NTAtNjg1ODgwZjAxYzI3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Casino">
+        <div class="info">
+            <h3>Casino</h3>
+            <p>Year: 1995 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMDIzODcyY2EtMmY2MC00ZWVlLTgwMzAtMjQwOWUyNmJjNTYyXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Truman Show">
+        <div class="info">
+            <h3>The Truman Show</h3>
+            <p>Year: 1998 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BYzFjMThiMGItOWRlMC00MDI4LThmOGUtYTNlZGZiYWI1YjMyXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Pan's Labyrinth">
+        <div class="info">
+            <h3>Pan's Labyrinth</h3>
+            <p>Year: 2006 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMjAxODQ4MDU5NV5BMl5BanBnXkFtZTcwMDU4MjU1MQ@@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: There Will Be Blood">
+        <div class="info">
+            <h3>There Will Be Blood</h3>
+            <p>Year: 2007 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BODM3YWY4NmQtN2Y3Ni00OTg0LWFhZGQtZWE3ZWY4MTJlOWU4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Unforgiven">
+        <div class="info">
+            <h3>Unforgiven</h3>
+            <p>Year: 1992 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMWM4NTFhYjctNzUyNi00NGMwLTk3NTYtMDIyNTZmMzRlYmQyXkEyXkFqcGdeQXVyMTAwMzUyOTc@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Sixth Sense">
+        <div class="info">
+            <h3>The Sixth Sense</h3>
+            <p>Year: 1999 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BYzhiNDkyNzktNTZmYS00ZTBkLTk2MDAtM2U0YjU1MzgxZjgzXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Shutter Island">
+        <div class="info">
+            <h3>Shutter Island</h3>
+            <p>Year: 2010 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMzcwYWFkYzktZjAzNC00OGY1LWI4YTgtNzc5MzVjMDVmNjY0XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: A Beautiful Mind">
+        <div class="info">
+            <h3>A Beautiful Mind</h3>
+            <p>Year: 2001 | Rating: 8.2</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMjM2MDgxMDg0Nl5BMl5BanBnXkFtZTgwNTM2OTM5NDE@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Jurassic Park">
+        <div class="info">
+            <h3>Jurassic Park</h3>
+            <p>Year: 1993 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BZThiZjAzZjgtNDU3MC00YThhLThjYWUtZGRkYjc2ZWZlOTVjXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Yojimbo">
+        <div class="info">
+            <h3>Yojimbo</h3>
+            <p>Year: 1961 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BOTJlZWMxYzEtMjlkMS00ODE0LThlM2ItMDI3NGQ2YjhmMzkxXkEyXkFqcGdeQXVyMDI2NDg0NQ@@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Treasure of the Sierra Madre">
+        <div class="info">
+            <h3>The Treasure of the Sierra Madre</h3>
+            <p>Year: 1948 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BN2IyNTE4YzUtZWU0Mi00MGIwLTgyMmQtMzQ4YzQxYWNlYWE2XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Monty Python and the Holy Grail">
+        <div class="info">
+            <h3>Monty Python and the Holy Grail</h3>
+            <p>Year: 1975 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMjA5Njk3MjM4OV5BMl5BanBnXkFtZTcwMTc5MTE1MQ@@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: No Country for Old Men">
+        <div class="info">
+            <h3>No Country for Old Men</h3>
+            <p>Year: 2007 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNzA2NmYxMWUtNzBlMC00MWM2LTkwNmQtYTFlZjQwODNhOWE0XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Great Escape">
+        <div class="info">
+            <h3>The Great Escape</h3>
+            <p>Year: 1963 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNzM3NDFhYTAtYmU5Mi00NGRmLTljYjgtMDkyODQ4MjNkMGY2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Kill Bill: Vol. 1">
+        <div class="info">
+            <h3>Kill Bill: Vol. 1</h3>
+            <p>Year: 2003 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMjEzMzA4NDE2OF5BMl5BanBnXkFtZTcwNTc5MDI2NQ@@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Rashomon">
+        <div class="info">
+            <h3>Rashomon</h3>
+            <p>Year: 1950 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BZWMyYzFjYTYtNTRjYi00OGExLWE2YzgtOGRmYjAxZTU3NzBiXkEyXkFqcGdeQXVyMzQ0MzA0NTM@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Spider-Man: No Way Home">
+        <div class="info">
+            <h3>Spider-Man: No Way Home</h3>
+            <p>Year: 2021 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNGViZWZmM2EtNGYzZi00ZDAyLTk3ODMtNzIyZTBjN2Y1NmM1XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Thing">
+        <div class="info">
+            <h3>The Thing</h3>
+            <p>Year: 1982 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BZTAzNWZlNmUtZDEzYi00ZjA5LWIwYjEtZGM1NWE1MjE4YWRhXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Finding Nemo">
+        <div class="info">
+            <h3>Finding Nemo</h3>
+            <p>Year: 2003 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMDVjNjIwOGItNDE3Ny00OThjLWE0NzQtZTU3YjMzZTZjMzhkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Elephant Man">
+        <div class="info">
+            <h3>The Elephant Man</h3>
+            <p>Year: 1980 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMjJkMDZhYzItZTFhMi00ZGI4LThlNTAtZDNlYmEwNjFkNDYzXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Chinatown">
+        <div class="info">
+            <h3>Chinatown</h3>
+            <p>Year: 1974 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BYjRmODkzNDItMTNhNi00YjJlLTg0ZjAtODlhZTM0YzgzYThlXkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Raging Bull">
+        <div class="info">
+            <h3>Raging Bull</h3>
+            <p>Year: 1980 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BOTI5ODc3NzExNV5BMl5BanBnXkFtZTcwNzYxNzQzMw@@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: V for Vendetta">
+        <div class="info">
+            <h3>V for Vendetta</h3>
+            <p>Year: 2005 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BYjUyZWZkM2UtMzYxYy00ZmQ3LWFmZTQtOGE2YjBkNjA3YWZlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Gone with the Wind">
+        <div class="info">
+            <h3>Gone with the Wind</h3>
+            <p>Year: 1939 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMTAyN2JmZmEtNjAyMy00NzYwLThmY2MtYWQ3OGNhNjExMmM4XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Lock, Stock and Two Smoking Barrels">
+        <div class="info">
+            <h3>Lock, Stock and Two Smoking Barrels</h3>
+            <p>Year: 1998 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BOTgxMDQwMDk0OF5BMl5BanBnXkFtZTgwNjU5OTg2NDE@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Inside Out">
+        <div class="info">
+            <h3>Inside Out</h3>
+            <p>Year: 2015 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BOWIwODIxYWItZDI4MS00YzhhLWE3MmYtMzlhZDIwOTMzZmE5L2ltYWdlXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Dial M for Murder">
+        <div class="info">
+            <h3>Dial M for Murder</h3>
+            <p>Year: 1954 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BY2FhZGI5M2QtZWFiZS00NjkwLWE4NWQtMzg3ZDZjNjdkYTJiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Secret in Their Eyes">
+        <div class="info">
+            <h3>The Secret in Their Eyes</h3>
+            <p>Year: 2009 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNmM4YTFmMmItMGE3Yy00MmRkLTlmZGEtMzZlOTQzYjk3MzA2XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Howl's Moving Castle">
+        <div class="info">
+            <h3>Howl's Moving Castle</h3>
+            <p>Year: 2004 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMjI0ODcxNzM1N15BMl5BanBnXkFtZTgwMzIwMTEwNDI@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Three Billboards Outside Ebbing, Missouri">
+        <div class="info">
+            <h3>Three Billboards Outside Ebbing, Missouri</h3>
+            <p>Year: 2017 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BOGY5NmNlMmQtYzRlYy00NGQ5LWFkYjYtNzExZmQyMTg0ZDA0XkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Bridge on the River Kwai">
+        <div class="info">
+            <h3>The Bridge on the River Kwai</h3>
+            <p>Year: 1957 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMzA5Zjc3ZTMtMmU5YS00YTMwLWI4MWUtYTU0YTVmNjVmODZhXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Trainspotting">
+        <div class="info">
+            <h3>Trainspotting</h3>
+            <p>Year: 1996 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMTg0NTIzMjQ1NV5BMl5BanBnXkFtZTcwNDc3MzM5OQ@@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Prisoners">
+        <div class="info">
+            <h3>Prisoners</h3>
+            <p>Year: 2013 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMTk4ODk5MTMyNV5BMl5BanBnXkFtZTcwMDMyNTg0Ng@@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Warrior">
+        <div class="info">
+            <h3>Warrior</h3>
+            <p>Year: 2011 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNDJiZDgyZjctYmRjMS00ZjdkLTkwMTEtNGU1NDg3NDQ0Yzk1XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Fargo">
+        <div class="info">
+            <h3>Fargo</h3>
+            <p>Year: 1996 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMTc5NTk2OTU1Nl5BMl5BanBnXkFtZTcwMDc3NjAwMg@@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Gran Torino">
+        <div class="info">
+            <h3>Gran Torino</h3>
+            <p>Year: 2008 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BYzJjMTYyMjQtZDI0My00ZjE2LTkyNGYtOTllNGQxNDMyZjE0XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: My Neighbor Totoro">
+        <div class="info">
+            <h3>My Neighbor Totoro</h3>
+            <p>Year: 1988 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMTY5MzYzNjc5NV5BMl5BanBnXkFtZTYwNTUyNTc2._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Catch Me If You Can">
+        <div class="info">
+            <h3>Catch Me If You Can</h3>
+            <p>Year: 2002 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMTkxNzA1NDQxOV5BMl5BanBnXkFtZTcwNTkyMTIzMw@@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Million Dollar Baby">
+        <div class="info">
+            <h3>Million Dollar Baby</h3>
+            <p>Year: 2004 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BZTYwZWQ4ZTQtZWU0MS00N2YwLWEzMDItZWFkZWY0MWVjODVhXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Children of Heaven">
+        <div class="info">
+            <h3>Children of Heaven</h3>
+            <p>Year: 1997 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNzQzMzJhZTEtOWM4NS00MTdhLTg0YjgtMjM4MDRkZjUwZDBlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Blade Runner">
+        <div class="info">
+            <h3>Blade Runner</h3>
+            <p>Year: 1982 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BZjEyOTE4MzMtNmMzMy00Mzc3LWJlOTQtOGJiNDE0ZmJiOTU4L2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Gold Rush">
+        <div class="info">
+            <h3>The Gold Rush</h3>
+            <p>Year: 1925 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMWYwOThjM2ItZGYxNy00NTQwLWFlZWEtM2MzM2Q5MmY3NDU5XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Klaus">
+        <div class="info">
+            <h3>Klaus</h3>
+            <p>Year: 2019 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BZDdiZTAwYzAtMDI3Ni00OTRjLTkzN2UtMGE3MDMyZmU4NTU4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Before Sunrise">
+        <div class="info">
+            <h3>Before Sunrise</h3>
+            <p>Year: 1995 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMGVmMWNiMDktYjQ0Mi00MWIxLTk0N2UtN2ZlYTdkN2IzNDNlXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Harry Potter and the Deathly Hallows: Part 2">
+        <div class="info">
+            <h3>Harry Potter and the Deathly Hallows: Part 2</h3>
+            <p>Year: 2011 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMjExMTEzODkyN15BMl5BanBnXkFtZTcwNTU4NTc4OQ@@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: 12 Years a Slave">
+        <div class="info">
+            <h3>12 Years a Slave</h3>
+            <p>Year: 2013 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BY2I0MWFiZDMtNWQyYy00Njk5LTk3MDktZjZjNTNmZmVkYjkxXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: On the Waterfront">
+        <div class="info">
+            <h3>On the Waterfront</h3>
+            <p>Year: 1954 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNjgxY2JiZDYtZmMwOC00ZmJjLWJmODUtMTNmNWNmYWI5ODkwL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Ben-Hur">
+        <div class="info">
+            <h3>Ben-Hur</h3>
+            <p>Year: 1959 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMzM5NjUxOTEyMl5BMl5BanBnXkFtZTgwNjEyMDM0MDE@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Grand Budapest Hotel">
+        <div class="info">
+            <h3>The Grand Budapest Hotel</h3>
+            <p>Year: 2014 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMTk0MDQ3MzAzOV5BMl5BanBnXkFtZTgwNzU1NzE3MjE@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Gone Girl">
+        <div class="info">
+            <h3>Gone Girl</h3>
+            <p>Year: 2014 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BYWQxYzdhMDMtNjAyZC00NzE0LWFjYmQtYjk0YzMyYjA5NzZkXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Wild Strawberries">
+        <div class="info">
+            <h3>Wild Strawberries</h3>
+            <p>Year: 1957 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BYmRiMDFlYjYtOTMwYy00OGY2LWE0Y2QtYzQxOGNhZmUwNTIxXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The General">
+        <div class="info">
+            <h3>The General</h3>
+            <p>Year: 1926 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMmYyOTgwYWItYmU3Ny00M2E2LTk0NWMtMDVlNmQ0MWZiMTMxXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: In the Name of the Father">
+        <div class="info">
+            <h3>In the Name of the Father</h3>
+            <p>Year: 1993 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BYjE2OTdhMWUtOGJlMy00ZDViLWIzZjgtYjZkZGZmMDZjYmEyXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Third Man">
+        <div class="info">
+            <h3>The Third Man</h3>
+            <p>Year: 1949 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNmY0MWY2NDctZDdmMi00MjA1LTk0ZTQtZDMyZTQ1NTNlYzVjXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Barry Lyndon">
+        <div class="info">
+            <h3>Barry Lyndon</h3>
+            <p>Year: 1975 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNDhmNTA0ZDMtYjhkNS00NzEzLWIzYTItOGNkMTVmYjE2YmI3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Deer Hunter">
+        <div class="info">
+            <h3>The Deer Hunter</h3>
+            <p>Year: 1978 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMjQ1NjM3MTUxNV5BMl5BanBnXkFtZTgwMDc5MTY5OTE@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Hacksaw Ridge">
+        <div class="info">
+            <h3>Hacksaw Ridge</h3>
+            <p>Year: 2016 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BZDdkNzMwZmUtY2Q5MS00ZmM2LWJhYjItYTBjMWY0MGM4MDRjXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Wages of Fear">
+        <div class="info">
+            <h3>The Wages of Fear</h3>
+            <p>Year: 1953 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BOGViNTg4YTktYTQ2Ni00MTU0LTk2NWUtMTI4OTc1YTM0NzQ2XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Memories of Murder">
+        <div class="info">
+            <h3>Memories of Murder</h3>
+            <p>Year: 2003 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BZWFhOGU5NDctY2Q3YS00Y2VlLWI1NzEtZmIwY2ZiZjY4OTA2XkEyXkFqcGdeQXVyMDI2NDg0NQ@@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Sherlock Jr.">
+        <div class="info">
+            <h3>Sherlock Jr.</h3>
+            <p>Year: 1924 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNGQzY2Y0MTgtMDA4OC00NjM3LWI0ZGQtNTJlM2UxZDQxZjI0XkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Wild Tales">
+        <div class="info">
+            <h3>Wild Tales</h3>
+            <p>Year: 2014 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BZTYwYjYxYzgtMDE1Ni00NzU4LWJlMTEtODQ5YmJmMGJhZjI5L2ltYWdlXkEyXkFqcGdeQXVyMDI2NDg0NQ@@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Mr. Smith Goes to Washington">
+        <div class="info">
+            <h3>Mr. Smith Goes to Washington</h3>
+            <p>Year: 1939 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BN2EwM2I5OWMtMGQyMi00Zjg1LWJkNTctZTdjYTA4OGUwZjMyXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Mad Max: Fury Road">
+        <div class="info">
+            <h3>Mad Max: Fury Road</h3>
+            <p>Year: 2015 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMDgzYjQwMDMtNGUzYi00MTRmLWIyMGMtNjE1OGZkNzY2YWIzL2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Mary and Max">
+        <div class="info">
+            <h3>Mary and Max</h3>
+            <p>Year: 2009 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BOWM3MmE0OGYtOGVlNC00OWE1LTk5ZTAtYmUwMDIwM2ZlNWJiXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Seventh Seal">
+        <div class="info">
+            <h3>The Seventh Seal</h3>
+            <p>Year: 1957 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMjA5NDQyMjc2NF5BMl5BanBnXkFtZTcwMjg5ODcyMw@@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: How to Train Your Dragon">
+        <div class="info">
+            <h3>How to Train Your Dragon</h3>
+            <p>Year: 2010 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMTY1NTI0ODUyOF5BMl5BanBnXkFtZTgwNTEyNjQ0MDE@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Monsters, Inc.">
+        <div class="info">
+            <h3>Monsters, Inc.</h3>
+            <p>Year: 2001 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMjE4NzgzNzEwMl5BMl5BanBnXkFtZTgwMTMzMDE0NjE@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Room">
+        <div class="info">
+            <h3>Room</h3>
+            <p>Year: 2015 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMmVmODY1MzEtYTMwZC00MzNhLWFkNDMtZjAwM2EwODUxZTA5XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Jaws">
+        <div class="info">
+            <h3>Jaws</h3>
+            <p>Year: 1975 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BOGYwYWNjMzgtNGU4ZC00NWQ2LWEwZjUtMzE1Zjc3NjY3YTU1XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Dead Poets Society">
+        <div class="info">
+            <h3>Dead Poets Society</h3>
+            <p>Year: 1989 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMTQ0NjUzMDMyOF5BMl5BanBnXkFtZTgwODA1OTU0MDE@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Big Lebowski">
+        <div class="info">
+            <h3>The Big Lebowski</h3>
+            <p>Year: 1998 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BYWQ4ZTRiODktNjAzZC00Nzg1LTk1YWQtNDFmNDI0NmZiNGIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Tokyo Story">
+        <div class="info">
+            <h3>Tokyo Story</h3>
+            <p>Year: 1953 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNjBjNDJiYTUtOWY0OS00OGVmLTg2YzctMTE0NzVhODM1ZWJmXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Passion of Joan of Arc">
+        <div class="info">
+            <h3>The Passion of Joan of Arc</h3>
+            <p>Year: 1928 | Rating: 8.1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BM2UwMDVmMDItM2I2Yi00NGZmLTk4ZTUtY2JjNTQ3OGQ5ZjM2XkEyXkFqcGdeQXVyMTA1OTYzOTUx._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Ford v Ferrari">
+        <div class="info">
+            <h3>Ford v Ferrari</h3>
+            <p>Year: 2019 | Rating: 8.0</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BZGJjYmIzZmQtNWE4Yy00ZGVmLWJkZGEtMzUzNmQ4ZWFlMjRhXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Hotel Rwanda">
+        <div class="info">
+            <h3>Hotel Rwanda</h3>
+            <p>Year: 2004 | Rating: 8.0</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNTBkMjg2MjYtYTZjOS00ODQ0LTg0MDEtM2FiNmJmOGU1NGEwXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Rocky">
+        <div class="info">
+            <h3>Rocky</h3>
+            <p>Year: 1976 | Rating: 8.0</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMzRjZjdlMjQtODVkYS00N2YzLWJlYWYtMGVlN2E5MWEwMWQzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Platoon">
+        <div class="info">
+            <h3>Platoon</h3>
+            <p>Year: 1986 | Rating: 8.0</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMTMzODU0NTkxMF5BMl5BanBnXkFtZTcwMjQ4MzMzMw@@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Ratatouille">
+        <div class="info">
+            <h3>Ratatouille</h3>
+            <p>Year: 2007 | Rating: 8.0</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMjIyOTM5OTIzNV5BMl5BanBnXkFtZTgwMDkzODE2NjE@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Spotlight">
+        <div class="info">
+            <h3>Spotlight</h3>
+            <p>Year: 2015 | Rating: 8.0</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BYTViNzMxZjEtZGEwNy00MDNiLWIzNGQtZDY2MjQ1OWViZjFmXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Terminator">
+        <div class="info">
+            <h3>The Terminator</h3>
+            <p>Year: 1984 | Rating: 8.0</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BYzc5MTU4N2EtYTkyMi00NjdhLTg3NWEtMTY4OTEyMzJhZTAzXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Logan">
+        <div class="info">
+            <h3>Logan</h3>
+            <p>Year: 2017 | Rating: 8.0</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BODJmY2Y2OGQtMDg2My00N2Q3LWJmZTUtYTc2ODBjZDVlNDlhXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Stand by Me">
+        <div class="info">
+            <h3>Stand by Me</h3>
+            <p>Year: 1986 | Rating: 8.0</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BOWEwODJmZDItYTNmZC00OGM4LThlNDktOTQzZjIzMGQxODA4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Rush">
+        <div class="info">
+            <h3>Rush</h3>
+            <p>Year: 2013 | Rating: 8.0</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNzY0NjU5ODUtOTAzMC00NTU5LWJkZjctYWMyOWY2MTZmOWM1XkEyXkFqcGdeQXVyMTI3ODAyMzE2._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Network">
+        <div class="info">
+            <h3>Network</h3>
+            <p>Year: 1976 | Rating: 8.0</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMTQ1MjAwNTM5Ml5BMl5BanBnXkFtZTYwNDM0MTc3._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Before Sunset">
+        <div class="info">
+            <h3>Before Sunset</h3>
+            <p>Year: 2004 | Rating: 8.0</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNjQ0ODlhMWUtNmUwMS00YjExLWI4MjQtNjVmMmE2Y2E0MGRmXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Into the Wild">
+        <div class="info">
+            <h3>Into the Wild</h3>
+            <p>Year: 2007 | Rating: 8.0</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNjUyMTc4MDExMV5BMl5BanBnXkFtZTgwNDg0NDIwMjE@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Wizard of Oz">
+        <div class="info">
+            <h3>The Wizard of Oz</h3>
+            <p>Year: 1939 | Rating: 8.0</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BY2RmNTRjYzctODI4Ni00MzQyLWEyNTAtNjU0N2JkMTNhNjJkXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Best Years of Our Lives">
+        <div class="info">
+            <h3>The Best Years of Our Lives</h3>
+            <p>Year: 1946 | Rating: 8.0</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMmFkNDY5OTktNzY3Yy00OTFlLThhNjktOTRhMmZjZmIxYjAxXkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Pather Panchali">
+        <div class="info">
+            <h3>Pather Panchali</h3>
+            <p>Year: 1955 | Rating: 8.0</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BZWIxNzM5YzQtY2FmMS00Yjc3LWI1ZjUtNGVjMjMzZTIxZTIxXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Groundhog Day">
+        <div class="info">
+            <h3>Groundhog Day</h3>
+            <p>Year: 1993 | Rating: 8.0</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BYWFlZGY2NDktY2ZjOS00ZWNkLTg0ZDAtZDY4MTM1ODU4ZjljXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Exorcist">
+        <div class="info">
+            <h3>The Exorcist</h3>
+            <p>Year: 1973 | Rating: 8.0</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMGY3ZDgzY2MtNTllNi00ZWI1LTk1NTUtNWEzN2Q4YTA1ZGZiXkEyXkFqcGdeQXVyNzI1NzMxNzM@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: To Be or Not to Be">
+        <div class="info">
+            <h3>To Be or Not to Be</h3>
+            <p>Year: 1942 | Rating: 8.0</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMTY5OTU0OTc2NV5BMl5BanBnXkFtZTcwMzU4MDcyMQ@@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Incredibles">
+        <div class="info">
+            <h3>The Incredibles</h3>
+            <p>Year: 2004 | Rating: 8.0</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BOTQxOGU0OWUtMzExYy00ZjIxLWJmMzAtNTI1Y2YxYTMxN2RkXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: La haine">
+        <div class="info">
+            <h3>La haine</h3>
+            <p>Year: 1995 | Rating: 8.0</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNGYyZGM5MGMtYTY2Ni00M2Y1LWIzNjQtYWUzM2VlNGVhMDNhXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Pirates of the Caribbean: The Curse of the Black Pearl">
+        <div class="info">
+            <h3>Pirates of the Caribbean: The Curse of the Black Pearl</h3>
+            <p>Year: 2003 | Rating: 8.0</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BN2M4YTA4ZTEtN2EyNy00YTlmLWE4YzYtYjYyYjRkMWM4ZDM0XkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Battle of Algiers">
+        <div class="info">
+            <h3>The Battle of Algiers</h3>
+            <p>Year: 1966 | Rating: 8.0</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BOTM0NWFjNGYtNjExMS00ZTZlLWFiYmMtZmU4ZjZkMmMxZTNjXkEyXkFqcGdeQXVyODEyNjEwMDk@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Jai Bhim">
+        <div class="info">
+            <h3>Jai Bhim</h3>
+            <p>Year: 2021 | Rating: 8.0</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNzE4NDg5OWMtMzg3NC00ZDRjLTllMDMtZTRjNWZmNjBmMGZlXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Hachi: A Dog's Tale">
+        <div class="info">
+            <h3>Hachi: A Dog's Tale</h3>
+            <p>Year: 2009 | Rating: 8.0</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNzJiOGI2MjctYjUyMS00ZjkzLWE2ZmUtOTg4NTZkOTNhZDc1L2ltYWdlXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Grapes of Wrath">
+        <div class="info">
+            <h3>The Grapes of Wrath</h3>
+            <p>Year: 1940 | Rating: 8.0</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNjAzMzEwYzctNjc1MC00Nzg5LWFmMGItMTgzYmMyNTY2OTQ4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: My Father and My Son">
+        <div class="info">
+            <h3>My Father and My Son</h3>
+            <p>Year: 2005 | Rating: 8.0</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BZjUxNmEwOGItMTBmYi00MWQ1LWExY2MtNDUxMjI0OWM4M2NiXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Amores Perros">
+        <div class="info">
+            <h3>Amores Perros</h3>
+            <p>Year: 2000 | Rating: 8.0</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BYTcxYWExOTMtMWFmYy00ZjgzLWI0YjktNWEzYzJkZTg0NDdmL2ltYWdlXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Rebecca">
+        <div class="info">
+            <h3>Rebecca</h3>
+            <p>Year: 1940 | Rating: 8.0</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNjcwNTQ3Y2EtMjdmZi00ODBhLWFhNzQtOTc3MWU5NTZlMDViXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Cool Hand Luke">
+        <div class="info">
+            <h3>Cool Hand Luke</h3>
+            <p>Year: 1967 | Rating: 8.0</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNDJhYTk2MTctZmVmOS00OTViLTgxNjQtMzQxOTRiMDdmNGRjXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Handmaiden">
+        <div class="info">
+            <h3>The Handmaiden</h3>
+            <p>Year: 2016 | Rating: 8.0</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BYTQ4MjA4NmYtYjRhNi00MTEwLTg0NjgtNjk3ODJlZGU4NjRkL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The 400 Blows">
+        <div class="info">
+            <h3>The 400 Blows</h3>
+            <p>Year: 1959 | Rating: 8.0</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BODIxNjhkYjEtYzUyMi00YTNjLWE1YjktNjAyY2I2MWNkNmNmL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Sound of Music">
+        <div class="info">
+            <h3>The Sound of Music</h3>
+            <p>Year: 1965 | Rating: 8.0</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BYzJmMWE5NjAtNWMyZS00NmFiLWIwMDgtZDE2NzczYWFhNzIzXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: It Happened One Night">
+        <div class="info">
+            <h3>It Happened One Night</h3>
+            <p>Year: 1934 | Rating: 8.0</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BYmFlOTcxMWUtZTMzMi00NWIyLTkwOTEtNjIxNmViNzc2Yzc1XkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Persona">
+        <div class="info">
+            <h3>Persona</h3>
+            <p>Year: 1966 | Rating: 8.0</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMDA1ZWI4ZDItOTRlYi00OTUxLWFlNWQtMzM5NDI0YjA4ZGI2XkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Life of Brian">
+        <div class="info">
+            <h3>Life of Brian</h3>
+            <p>Year: 1979 | Rating: 8.0</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BYzBjZTNkMzQtZmNkOC00Yzk0LTljMjktZjk3YWVlZjY3NTk2XkEyXkFqcGdeQXVyMTUzMDUzNTI3._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Iron Giant">
+        <div class="info">
+            <h3>The Iron Giant</h3>
+            <p>Year: 1999 | Rating: 8.0</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BM2MwZWNkZTktOWIxNS00ZWQ0LTg3ZDEtYTRlZDFmMWVjMjVmXkEyXkFqcGdeQXVyNjc5NjEzNA@@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Dersu Uzala">
+        <div class="info">
+            <h3>Dersu Uzala</h3>
+            <p>Year: 1975 | Rating: 8.0</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMTM5OTMyMjIxOV5BMl5BanBnXkFtZTcwNzU4MjIwNQ@@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: The Help">
+        <div class="info">
+            <h3>The Help</h3>
+            <p>Year: 2011 | Rating: 8.0</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BY2Q2NDI1MjUtM2Q5ZS00MTFlLWJiYWEtNTZmNjQ3OGJkZDgxXkEyXkFqcGdeQXVyNTI4MjkwNjA@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Aladdin">
+        <div class="info">
+            <h3>Aladdin</h3>
+            <p>Year: 1992 | Rating: 8.0</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BOGVmZGU2M2EtZTVjYy00OWU2LWI0YjEtZjQ4YjNmODhmMzhkXkEyXkFqcGdeQXVyNjk1Njg5NTA@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Gandhi">
+        <div class="info">
+            <h3>Gandhi</h3>
+            <p>Year: 1982 | Rating: 8.0</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMTY3OTI5NDczN15BMl5BanBnXkFtZTcwNDA0NDY3Mw@@._V1_UX128_CR0,12,128,176_AL_.jpg" alt="Image: Dances with Wolves">
+        <div class="info">
+            <h3>Dances with Wolves</h3>
+            <p>Year: 1990 | Rating: 8.0</p>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+<footer>
+    <a href="https://afonso.dev">afonso.dev</a> |
+    <a href="https://github.com/afonsodemori/sevendays-java">GitHub</a> |
+    <a href="https://afonso.dev/contact">Contact</a>
+</footer>
+</body>
+</html>
