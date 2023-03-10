@@ -63,3 +63,15 @@ _— See this page at https://afonsodemori.github.io/sevendays-java/day-4-movies
 ### References
 
 * [Java API: Class PrintWriter](https://docs.oracle.com/javase/7/docs/api/java/io/PrintWriter.html)
+
+## Day 5: Encapsulating our code
+
+Today's challenges are:
+
+* Encapsulating the API call inside a new class. You can call this class `ImdbApiClient`.
+* Also, to improve encapsulation and separate all responsibilities into their proper classes, create a new class to
+  parse the JSON.
+
+### References
+
+* [Alura: What is encapsulation?](https://www.alura.com.br/artigos/o-que-e-encapsulamento) _(in portuguese)_
