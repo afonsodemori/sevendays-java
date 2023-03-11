@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Main {
 
-    public static void main(String[] args) throws IOException, InterruptedException {
+    public static void main(String[] args) throws IOException {
         String json = new ImdbApiClient().get(ImdbApiClient.ENDPOINT_TOP_250_MOVIES);
         List<Movie> movies = ImdbMovieJsonParser.parse(json);
 
