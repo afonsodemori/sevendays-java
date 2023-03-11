@@ -30,7 +30,7 @@ public class CacheService {
 
     private static Path generateFilepath(String key) {
         // TODO: This regex is for URLs. Enough for this project, but not the best regex you'll see
-        String filename = key.replaceAll("[:/.]", "_");
+        String filename = key.replaceAll("[:/.&?=%]", "_");
         return Path.of("%s/%s--%s.txt".formatted(CACHE_DIR, FILE_PREFIX, filename));
     }
 }
