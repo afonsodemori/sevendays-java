@@ -6,7 +6,7 @@ public record Movie(
         int year,
         URI image,
         Double rating
-) {
+) implements Content {
     public static Movie fromMap(Map<String, String> movieMap) {
         return new Movie(
                 movieMap.get("title"),
