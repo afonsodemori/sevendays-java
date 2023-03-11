@@ -2,13 +2,11 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
-import java.time.Duration;
 
-public class ImdbApiClient {
+public class ImdbApiClient implements ApiClient {
 
     public static final String ENDPOINT_TOP_250_MOVIES = "https://imdb-api.com/en/API/Top250Movies/";
     private static final String API_KEY = System.getenv("IMDB_API_KEY");
-    private static final Duration REQUEST_TIMEOUT = Duration.ofSeconds(10);
 
     public String get(String endpoint) {
         return CacheService.get(endpoint, () -> {
