@@ -75,3 +75,18 @@ Today's challenges are:
 ### References
 
 * [Alura: What is encapsulation?](https://www.alura.com.br/artigos/o-que-e-encapsulamento) _(in portuguese)_
+
+## Day 6: Marvel API
+
+Adapt your code to also work with Marvel API. You should make your code more generic and prepared to receive data from
+other APIs. For this, interfaces come into play, which allow different implementations.
+
+### Screenshot
+
+![Day 6: Comics list](docs/images/day-6-comics-list.png)
+_— See this page at https://afonsodemori.github.io/sevendays-java/day-6-comics.html_
+
+### References
+
+* [Java API: Matcher Class](https://docs.oracle.com/javase/7/docs/api/java/util/regex/Matcher.html)
+* [Marvel API](https://developer.marvel.com/)
